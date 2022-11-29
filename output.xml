@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221128 23:25:00.313" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Cadastro Duplicidade" source="d:\Desktop\Testes_robot_IA\tests\test_cadastro_duplicidade.robot">
+<test id="s1-t1" name="Realizar cadastro em duplicidade" line="6">
+<kw name="Acessar o site de teste" library="MeuResource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${PAGINA}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221128 23:25:01.361" level="INFO">Opening browser 'Chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<status status="PASS" starttime="20221128 23:25:01.357" endtime="20221128 23:25:03.916"/>
+</kw>
+<status status="PASS" starttime="20221128 23:25:01.352" endtime="20221128 23:25:03.919"/>
+</kw>
+<kw name="Clicar em Novo Usuário" library="MeuResource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BTN_NOVOUSUARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221128 23:25:03.936" level="INFO">Clicking element '//*[@id="bs-example-navbar-collapse-1"]/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20221128 23:25:03.932" endtime="20221128 23:25:04.259"/>
+</kw>
+<status status="PASS" starttime="20221128 23:25:03.928" endtime="20221128 23:25:04.261"/>
+</kw>
+<kw name="Preencher o Campo Nome" library="MeuResource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>nome</arg>
+<arg>${NOVOUSUARIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221128 23:25:04.272" level="INFO">Typing text 'usuariotest123' into text field 'nome'.</msg>
+<status status="PASS" starttime="20221128 23:25:04.267" endtime="20221128 23:25:04.478"/>
+</kw>
+<status status="PASS" starttime="20221128 23:25:04.263" endtime="20221128 23:25:04.479"/>
+</kw>
+<kw name="Preencher o Campo Email" library="MeuResource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221128 23:25:04.489" level="INFO">Typing text 'usuariotest11@gmail.com' into text field 'email'.</msg>
+<status status="PASS" starttime="20221128 23:25:04.485" endtime="20221128 23:25:04.711"/>
+</kw>
+<status status="PASS" starttime="20221128 23:25:04.481" endtime="20221128 23:25:04.712"/>
+</kw>
+<kw name="Preencher o Campo Senha" library="MeuResource">
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>senha</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221128 23:25:04.723" level="INFO">Typing password into text field 'senha'.</msg>
+<msg timestamp="20221128 23:25:04.831" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221128 23:25:04.928" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221128 23:25:04.717" endtime="20221128 23:25:04.928"/>
+</kw>
+<status status="PASS" starttime="20221128 23:25:04.713" endtime="20221128 23:25:04.930"/>
+</kw>
+<kw name="Clicar em Cadastrar" library="MeuResource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Cadastrar</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221128 23:25:04.935" level="INFO">Clicking button 'Cadastrar'.</msg>
+<status status="PASS" starttime="20221128 23:25:04.934" endtime="20221128 23:25:05.563"/>
+</kw>
+<status status="PASS" starttime="20221128 23:25:04.932" endtime="20221128 23:25:05.565"/>
+</kw>
+<kw name="Checar se Aparece Mensagem de Email já Utilizado" library="MeuResource">
+<kw name="Current Frame Should Contain" library="SeleniumLibrary">
+<arg>${MSG_EMAILUTILIZADO}</arg>
+<doc>Verifies that the current frame contains ``text``.</doc>
+<msg timestamp="20221128 23:25:05.596" level="INFO">Current frame contains text 'Endereço de email já utilizado'.</msg>
+<status status="PASS" starttime="20221128 23:25:05.569" endtime="20221128 23:25:05.597"/>
+</kw>
+<status status="PASS" starttime="20221128 23:25:05.567" endtime="20221128 23:25:05.598"/>
+</kw>
+<status status="PASS" starttime="20221128 23:25:01.347" endtime="20221128 23:25:05.601"/>
+</test>
+<status status="PASS" starttime="20221128 23:25:00.335" endtime="20221128 23:25:05.611"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test Cadastro Duplicidade">Test Cadastro Duplicidade</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
